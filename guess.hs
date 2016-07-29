@@ -9,9 +9,9 @@ main = do putStrLn "Guess a number between 0 and 100"
 
 guess :: Int -> Int -> IO ()
 guess inputNumber systemNumber = 
-        if (inputNumber == systemNumber)
-           then do putStrLn "You're right!"
-                   return ()
-           else do putStrLn "Bzzzzz wrong!"
-                   inpStr <- getLine
-                   guess (read inpStr) systemNumber
+    if (inputNumber == systemNumber)
+    then do putStrLn "You're right!"
+            return ()
+    else do putStrLn "Bzzzzz wrong!"
+            inpStr <- getLine
+            guess (read inpStr) systemNumber
